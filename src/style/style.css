@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+::-webkit-scrollbar{
+    width: 30px;
+    background-color: #85929E;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #FFBC11;
+    box-shadow: rgba(255, 188, 17,0.4) 0px 30px 90px;;
+    border-radius: 10px;
+}
+
+body ,
+main, 
+section{
+    height: 100vh;
+    width: 100vw;
+    background-color: #17dada;
+    
+}
+
+section{ 
+    min-width: 100%; 
+    height: 100%;
+}
+
+main{
+    display: flex;
+    position: relative;
+    overflow-x: scroll;
+}
+
+header{
+    max-width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+nav{
+    background-color: aliceblue;
+    margin-left: 2.5rem;
+    height: 75%;
+    border-radius: 10px;
+    padding: 2.5rem 1.5rem;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+nav a{
+    text-decoration: none;
+}
+
+.nav-logo-active{ display: none; }
+
+
+.container-banner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    max-width: fit-content;
+    gap: 2rem ;
+    padding-right: 2.5rem;
+    padding-bottom: 1.6rem;
+}
+
+.banner{
+    background-color: #FDFEFE;
+    height: 50px;
+    width: 300px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: var(--var-box-shadows);
+}
+
+
+#Home{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-banner-indicator{  
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-buttom{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+.container-buttom input{
+    background-color: #FDFEFE;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border-width: 0;
+    box-shadow: var(--var-box-shadows);
+}
+
+
+.container-indicator > .indicator-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.indicator-list  div{
+    width: 17px;
+    height: 17px;
+    background-color: #FFBC11;
+    border-radius: 50%;
+    box-shadow: var(--var-box-shadows);
+}
+
+.container-buttom input,
+.indicator-list  div,
+.banner,
+nav{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;   
+}
+
+
+#About{
+    background-color:  #58D68D;
+}
+
+#Contact{
+    background-color: beige;
+}
