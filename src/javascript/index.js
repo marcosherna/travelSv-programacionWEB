@@ -6,12 +6,15 @@ const container = document.querySelector('main');
 const home = document.querySelector('#Home');
 const buttons = document.querySelectorAll('.banner-btn')
 
+const loaderImg = document.querySelector('.loader-img')
+
 const navHover = document.querySelector('.nav-hover');
 const navItems = document.querySelectorAll('li');
 const navTextSelection = document.querySelector('.nav-text-selection');
 /* reseteamos la clase que se le asigna 
     al div nav-hover*/
 navHover.classList.remove('active');
+loaderImg.classList.remove('loading');
 
 
 /* Prototipo para el carusel de imagenes*/
