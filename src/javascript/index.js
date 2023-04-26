@@ -6,6 +6,13 @@ const container = document.querySelector('main');
 const home = document.querySelector('#Home');
 const buttons = document.querySelectorAll('.banner-btn')
 
+const navHover = document.querySelector('.nav-hover');
+const navItems = document.querySelectorAll('li');
+const navTextSelection = document.querySelector('.nav-text-selection');
+/* reseteamos la clase que se le asigna 
+    al div nav-hover*/
+navHover.classList.remove('active');
+
 
 /* Prototipo para el carusel de imagenes*/
 buttons.forEach( btn => {
@@ -22,15 +29,16 @@ buttons.forEach( btn => {
 banner.addEventListener('click', function () {
     if (this.style.height == '50px') {
         this.style.height = '80%';
-        this.style.transition = 'ease-in-out .4s';
+        this.style.transition = 'all .4s ease-in-out';
         
     } else {
         this.style.height = '50px'
-        this.style.transition = 'ease-in .4s'
+        this.style.transition = 'all .4s ease-in'
     }
 })
 
 
+let index = 0;
 links.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
@@ -42,20 +50,25 @@ links.forEach(link => {
             behavior: 'smooth'
         });
     });
+
+    navItems[index].addEventListener('mouseover', () => {
+        navHover.classList.remove('disable');
+        navHover.classList.add('active');
+
+        let text = link.getAttribute('href').replace('#', '').toUpperCase();
+        if(link.getAttribute('class') == 'text-logo'){   
+            text = 'TRAVEL-SV'
+        }
+        navTextSelection.textContent = text;
+    });
+
+    navItems[index].addEventListener('mouseout', () => {
+        navHover.classList.remove('active');
+        navHover.classList.add('disable');
+    });
+
+    index++;
+
 })
 
 
-/*
-for (const link of links) {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        const href = link.getAttribute('href');
-        const section = document.querySelector(href);
-        container.scrollTo({
-            left: section.offsetLeft,
-            behavior: 'smooth'
-        });
-    });
-}
-*/
