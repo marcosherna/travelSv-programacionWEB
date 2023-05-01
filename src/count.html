@@ -4,58 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css/estilo1.css">
-    <title>COUNT</title>
+    <link rel="stylesheet" href="styles/styles1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Count</title>
 </head>
 <body>
-    <div class="box">
-        <div class="container">
-            <div class="top-header">
-                <header>CREATE COUNT</header>
-            </div>
-            <div class="input-nombre">
-                <label>Nombres:</label>
-                <input type="name" class="input" required>
-            </div>
-            <div class="input-apellido">
-                <label>Apellidos:</label>
-                <input type="lastname" class="input" required>
-            </div>
-            <div class="input-email">
-                <label>Email:</label>
-                <input type="email" class="input" required>
-            </div>
-            <div class="input-password">
-                <label>Constraseña:</label>
-                <input type="password" class="input"  required>
-            </div>
-            <div class="input-telefono">
-                <label>Telefono:</label>
-                <input type="Telefono" class="input" required>
-            </div>
-            <div class="input-pais">
-                <label>Pais de Recidencia:</label>
-                <input type="pais" class="input" required>
-             
-            </div>
-            <div class="input-fechanacimiento">
-                <div class="da">
-                    <label for="text">Fecha de Nacimiento</label>
+    <div class="container">
+        <div class="title">Registration</div>
+        <from action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nombre</span>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Apellido</span>
+                    <input type="text" placeholder="Enter your apellido" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contraseña</span>
+                    <input type="text" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirma Contraseña</span>
+                    <input type="text" placeholder="Enter your contraseñA" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Telefono</span>
+                    <input type="text" placeholder="Enter your " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Pais</span>
+                    <input type="text" placeholder="Pais de Residencia" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Fecha de Nacimiento</span>
                     <input type="date" name="date" value="date">
                 </div>
-            </div>
-            <div class="input-field">
-                <label>Genero</label>
+                <div class="input-box">
+                    <span class="details">Genero</span>
                     <select name="Genero">
-                       <option value="SELECCION">SELECCIONE UNA OPCION</option>
-                       <option value="MASCULINO">MASCULINO</option>
-                       <option value="FEMENINO">FEMENINO</option>
-                    </select>
+                        <option value="SELECCION">SELECCIONE UNA OPCION</option>
+                        <option value="MASCULINO">MASCULINO</option>
+                        <option value="FEMENINO">FEMENINO</option>
+                     </select>
+                </div>
             </div>
+            <!-- /*CAMBIA AL SIGUIENTE DIV PARA EL BOTON*/ -->
             <div class="input-field">
-                <input type="submit" class="submit" value="Login">
+                    <input type="submit" class="submit" value="Login">
             </div>
-        </div>
+            <div class="politicas">
+                <label>Al  iniciar sesion para crear la cuenta  acepto el</label><br>
+                <label>Termino de uso y politicas de privacidad</label>
+            </div>
+        </from>
     </div>
 </body>
 </html>

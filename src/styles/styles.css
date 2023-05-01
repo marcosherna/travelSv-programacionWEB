@@ -7,9 +7,7 @@ body{
     background-position: center;
     background-attachment: fixed; 
 }
-img{
-    margin:-100px;
-}
+*{font-family: 'Roboto', sans-serif;}
 .box{
     display: flex;
     justify-content: center;
@@ -21,7 +19,6 @@ img{
     display: flex;
     flex-direction: column;
     padding: 0 15px 0 15px;
-    
 }
 span{
     color: #fff;
@@ -37,7 +34,6 @@ header{
     justify-content: center;
     padding: 10px 0 10px 0;
 }
-
 .input-field .input{
     height: 45px;
     width: 87%;
@@ -91,15 +87,28 @@ label a{
     text-decoration: none;
     color: #fff;
 }
-
 .left{
     padding: 10px;
 }
+.bottom .separator{
+    border-left: 1px solid rgb(255, 255, 255);
+    height: 50px;
+    margin: 0 20px;
+}
 .bottom{
     margin-top: 40px;
-    width: 182px;
-    font-weight: 30;
-    font-size: 18px;
-    line-height: 22px;
-
+    display: flex;
+    margin-left:2px ;
 }
+a{
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.bottom .link2{
+    margin-left: 4px;
+}
+
+
