@@ -1,0 +1,70 @@
+footer {
+  background-color: #242121;
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+footer h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+footer p, footer ul {
+  color: #ffffff;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #0A837F;
+  text-decoration: none;
+}
+/*
+.noticia {/*Noticia que LLeva las Columnas*/
+ /* column-width: 300px;
+  column-gap: 20px;
+  column-rule: 2px solid #ccc; /* Agrega una lÃ­nea divisoria en medio de las columnas */
+  /*margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(249, 249, 249, 0.3);
+}
+*/
+footer .secciones {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+}
+
+.mosaico img {
+  width: 100%;
+  height: auto;
+}
+
+
