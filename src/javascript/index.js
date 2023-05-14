@@ -6,25 +6,65 @@ const container = document.querySelector('main');
 const home = document.querySelector('#Home');
 const buttons = document.querySelectorAll('.banner-btn')
 
-const loaderImg = document.querySelector('.loader-img')
+const loaderImg = document.querySelectorAll('.loader-img > span')
+const loader = document.querySelector('.loader-img');
 
 const navHover = document.querySelector('.nav-hover');
 const navItems = document.querySelectorAll('li');
 const navTextSelection = document.querySelector('.nav-text-selection');
-/* reseteamos la clase que se le asigna 
-    al div nav-hover*/
-navHover.classList.remove('active');
-loaderImg.classList.remove('loading');
+
+const imagenes =  [];
+
+
+
+
+
+const activeLoader = ( ()=> {
+    loader.style.display = 'flex'
+    for (const span of loader.children) {
+        span.classList.add('loading');   
+        
+        setTimeout( ()=>{ 
+            span.classList.remove('loading');
+            loader.style.display = 'none';
+        }, 1500);
+    }
+});
+
+
 
 
 /* Prototipo para el carusel de imagenes*/
+let selectedItemCarousel = 0;
+const addImgCarousel = ()=>{
+    for(let i = 1;i <= 5; i++){
+        let img = new Image();
+        img.src = `./img/img-${i}.png`;
+        imagenes.push(img);
+    }
+    home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;
+}
+
+addImgCarousel();
 buttons.forEach( btn => {
+
     btn.addEventListener('click', function () {
+
         if(this.getAttribute('id') == 'next'){
-            home.style.backgroundColor = '#FFBC11' 
+            selectedItemCarousel = (selectedItemCarousel == imagenes.length-1) ? 
+                            0 : selectedItemCarousel+1;
+
+            home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;
         } else {
-            home.style.backgroundColor = '#17dada'
+
+            selectedItemCarousel = (selectedItemCarousel == 0) ? 
+                            imagenes.length : selectedItemCarousel;
+
+            selectedItemCarousel--;
+            home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;    
         }
+
+        activeLoader();
     })
 });
 
@@ -54,6 +94,8 @@ links.forEach(link => {
         });
     });
 
+    // Se agreaga el evento mouseover, para los items del 
+    // de la barra de navegacion
     navItems[index].addEventListener('mouseover', () => {
         navHover.classList.remove('disable');
         navHover.classList.add('active');
@@ -71,7 +113,6 @@ links.forEach(link => {
     });
 
     index++;
-
 })
 
 
