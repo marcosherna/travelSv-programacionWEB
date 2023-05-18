@@ -2,19 +2,30 @@ footer {
   background-color: #242121;
   padding: 40px 0;
   border-top: 1px solid #ddd;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+.piePagina p {
+  font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 footer h3 {
   margin-top: 0;
-  font-size: 1.5em;
+  font-size: 20px;
   font-weight: bold;
   color: #ffffff;
 }
 
-footer p, footer ul {
+footer p,
+footer ul {
   color: #ffffff;
-  font-size: 1.1em;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -37,34 +48,89 @@ footer ul li a:hover {
   color: #0A837F;
   text-decoration: none;
 }
-/*
-.noticia {/*Noticia que LLeva las Columnas*/
- /* column-width: 300px;
-  column-gap: 20px;
-  column-rule: 2px solid #ccc; /* Agrega una lÃ­nea divisoria en medio de las columnas */
-  /*margin-bottom: 20px;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: rgba(249, 249, 249, 0.3);
-}
-*/
-footer .secciones {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  box-sizing: border-box;
-  padding: 0 20px;
+
+.piePagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.mosaico {
+.seccion1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.seccion1 .box:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.contact-icons li {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icons li img {
+  width: 20px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+  margin-right: 5px; /* Ajusta el margen derecho según tus necesidades */
+}
+
+
+.payment-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.payment-images img {
+  width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: 70px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+
+.seccion1 .box {
+  flex-basis: calc(20% - 20px);
+}
+
+.social-media-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(2, 0fr);
+  gap: 10px;
 }
 
-.mosaico img {
+.social-media-icons li {
+  width: 45px;
+  height: 45px;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+.social-media-icons li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-color: #787878;
+  border-radius: 15px;
 }
 
+.social-media-icons li a img {
+  max-width: 70%;
+  max-height: 70%;
+}
 
+.seccion2 {
+  clear: both;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.seccion2 small {
+  color: #ffffff;
+  font-size: 0.8em;
+}
