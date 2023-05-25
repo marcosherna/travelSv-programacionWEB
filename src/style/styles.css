@@ -1,11 +1,13 @@
 footer {
   background-color: #242121;
   padding: 40px 0;
-  border-top: 1px solid #ddd;
   font-family: 'Poppins', sans-serif;
 }
+
 .piePagina p {
-  font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .logo {
@@ -25,8 +27,6 @@ footer h3 {
 footer p,
 footer ul {
   color: #ffffff;
-  font-size: 16px;
-  line-height: 1.6;
 }
 
 footer ul {
@@ -52,21 +52,52 @@ footer ul li a:hover {
 .piePagina {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .seccion1 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.seccion1 .box:nth-child(2) {
-  margin-bottom: 10px;
+.seccion1 .Contacto,
+.seccion1 .Redes,
+.seccion1 .Pagos {
+  flex-basis: calc(20% - 10px); /* Mantenemos el ancho original */
+  margin-left: 50px;
+  margin-right: 10px;
 }
+
+
+.seccion1 .Enlaces,
+.seccion1 .Nosotros {
+  flex-basis: calc(10% - 10px); /* Ajustamos el ancho y el espacio */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.seccion1 .Contacto ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.seccion1 .Contacto ul li a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.seccion1 .Contacto ul li a img {
+  margin-right: 5px; /* Espacio entre la imagen y el texto */
+  width: 20px; /* Ancho de la imagen */
+  height: auto; /* Altura de la imagen ajustada automáticamente */
+}
+
 
 .contact-icons li {
   display: flex;
@@ -74,11 +105,10 @@ footer ul li a:hover {
 }
 
 .contact-icons li img {
-  width: 20px; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
-  margin-right: 5px; /* Ajusta el margen derecho según tus necesidades */
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
 }
-
 
 .payment-images {
   display: flex;
@@ -87,13 +117,8 @@ footer ul li a:hover {
 }
 
 .payment-images img {
-  width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: 70px; /* Ajusta la altura de la imagen según tus necesidades */
-}
-
-
-.seccion1 .box {
-  flex-basis: calc(20% - 20px);
+  width: 100px;
+  height: 70px;
 }
 
 .social-media-icons {
@@ -126,11 +151,27 @@ footer ul li a:hover {
 
 .seccion2 {
   clear: both;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
+  margin-top: 0; /* Elimina el margen superior */
+  flex-basis: calc(100% - 10px); /* La seccion2 ocupa todo el ancho disponible */
 }
 
-.seccion2 small {
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+
+.footer-links a {
   color: #ffffff;
   font-size: 0.8em;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.footer-links a:hover {
+  color: #0A837F;
 }
