@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400&display=swap');
+
+
 /*PONIENDO EL FONDO DEL LOGIN*/
 body{
     background-image: url("../img/fondo3.jpg");
@@ -7,7 +10,7 @@ body{
     background-position: center;
     background-attachment: fixed; 
 }
-*{font-family: 'Roboto', sans-serif;}
+*{font-family: 'Poppins', sans-serif;}
 .box{
     display: flex;
     justify-content: center;
@@ -15,10 +18,12 @@ body{
     min-height: 90vh;
 }
 .container{
+    background-color: #ffffff;
     width: 350px;
-    display: flex;
     flex-direction: column;
-    padding: 0 15px 0 15px;
+    padding: 25px  25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 span{
     color: #fff;
@@ -28,37 +33,52 @@ span{
     padding: 10px 0 10px 0;
 }
 header{
-    color: #fff;
+    color: #2d2d2d;
     font-size: 30px;
     display: flex;
     justify-content: center;
     padding: 10px 0 10px 0;
 }
+
 .input-field .input{
-    height: 45px;
+    height: 40px;
     width: 87%;
-    border-top: none;
-    border-right:none;
-    border-left: none;
-    border-bottom: 2px solid #ffffff;
-    color: #fff;
-    font-size: 15px;
-    padding: 0 0 0 45px;
-    background: rgba(82, 81, 81, 0.1);
     outline: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 0 0 0 45px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-bottom: 2px;
+    
 }
+/* estilo al dar click al input */
+.input-field .input select{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.container .input-field input:valid{
+    border-color: #0d62e1;
+}
+/* Inconos */
 i{
     position: relative;
-    top: -33px;
+    top: -30px;
     left: 17px;
-    color: #fff;
-}
-::-webkit-input-placeholder{
-    color: #fff;
+    color: #1a1a1a;
 }
 .submit{
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 15px;
     height: 45px;
     outline: none;
@@ -69,7 +89,7 @@ i{
     transition: .3s ;
 }
 .submit:hover{
-    box-shadow: 1px 5px 7px 1px rgba(7, 100, 97, 0.266);
+    box-shadow: 0px 1px 7px 0px rgb(38, 250, 193);
 }
 .two-col{
     display: flex;
@@ -93,10 +113,10 @@ label a{
 .bottom .separator{
     border-left: 1px solid rgb(255, 255, 255);
     height: 50px;
-    margin: 0 20px;
+    margin: 10 20px;
 }
 .bottom{
-    margin-top: 40px;
+    margin-top: 4px;
     display: flex;
     margin-left:2px ;
 }
@@ -110,5 +130,47 @@ a{
 .bottom .link2{
     margin-left: 4px;
 }
-
-
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+    padding: 10px;
+}
+label a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+.left{
+    padding: 5px;
+}
+.bottom .separator{
+    border-left: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    margin: 0 10px;
+}
+.bottom{
+    margin-top: 20px;
+    display: flex;
+    margin-left:20px ;
+}
+a{
+    display: flex;
+    color: #1b1a1a;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.bottom .link2{
+    margin-left: 10px;
+}
+/* mensaje de error */
+#mensajeError{
+    font-size: 12px;
+    color:#e10d4d
+}
