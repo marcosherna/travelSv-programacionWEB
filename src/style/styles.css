@@ -1,13 +1,16 @@
-footer {
-  background-color: #242121;
-  padding: 40px 0;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  
   font-family: 'Poppins', sans-serif;
 }
 
-.piePagina p {
+footer {
+  background-color: #242121;
+  padding: 2rem 7rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .logo {
@@ -21,13 +24,8 @@ footer h3 {
   margin-top: 0;
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
 }
 
-footer p,
-footer ul {
-  color: #ffffff;
-}
 
 footer ul {
   margin: 0;
@@ -35,141 +33,93 @@ footer ul {
   list-style: none;
 }
 
-footer ul li {
-  margin-bottom: 10px;
-}
-
-footer ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
 footer ul li a:hover {
   color: #0A837F;
   text-decoration: none;
 }
 
-.piePagina {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.seccion1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.seccion1 .Contacto,
-.seccion1 .Redes,
-.seccion1 .Pagos {
-  flex-basis: calc(20% - 10px); /* Mantenemos el ancho original */
-  margin-left: 50px;
-  margin-right: 10px;
-}
-
-
-.seccion1 .Enlaces,
-.seccion1 .Nosotros {
-  flex-basis: calc(10% - 10px); /* Ajustamos el ancho y el espacio */
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.seccion1 .Contacto ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-.seccion1 .Contacto ul li a {
+a {
   display: flex;
   align-items: center;
-  color: #ffffff;
   text-decoration: none;
 }
 
-.seccion1 .Contacto ul li a img {
-  margin-right: 5px; /* Espacio entre la imagen y el texto */
-  width: 20px; /* Ancho de la imagen */
-  height: auto; /* Altura de la imagen ajustada automáticamente */
-}
-
-
-.contact-icons li {
-  display: flex;
-  align-items: center;
-}
-
-.contact-icons li img {
-  width: 20px;
-  height: auto;
-  margin-right: 5px;
-}
-
-.payment-images {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.payment-images img {
-  width: 100px;
-  height: 70px;
-}
-
-.social-media-icons {
-  display: grid;
-  grid-template-columns: repeat(2, 0fr);
-  gap: 10px;
-}
-
-.social-media-icons li {
-  width: 45px;
-  height: 45px;
-  border: 5px solid black;
-  border-radius: 15px;
-}
-
-.social-media-icons li a {
+.Contacto {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;  
+}
+
+
+.Contacto ul li a{
+  display: flex;
+  gap: .7rem;
+}
+
+.contact-icons li{
+  padding-bottom:  1rem;
+}
+
+.seccion2, .encabezado{
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado{
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.Redes .social-media-icons,
+.Pagos ul > li,
+.Enlaces ul > li, 
+.Nosotros ul > li{
+  padding-top: 1rem;
+}
+
+
+.social-media-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  place-items: center;
+  padding: 0 1rem;
+}
+.social-media-icons > .icon{
+  background-color: #3E3D3D;
+  padding: .7rem;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+
+.payment-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.payment-images img {
+  height: 70px;
+}
+
+
+.terminos{
+  display: flex;
   height: 100%;
-  background-color: #787878;
-  border-radius: 15px;
-}
-
-.social-media-icons li a img {
-  max-width: 70%;
-  max-height: 70%;
-}
-
-.seccion2 {
-  clear: both;
-  margin-top: 10px;
-  text-align: center;
-  margin-top: 0; /* Elimina el margen superior */
-  flex-basis: calc(100% - 10px); /* La seccion2 ocupa todo el ancho disponible */
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .footer-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 0px;
-}
-
-.footer-links a {
-  color: #ffffff;
-  font-size: 0.8em;
-  text-decoration: none;
-  margin: 5px;
+  gap: .7rem;
 }
 
 .footer-links a:hover {
