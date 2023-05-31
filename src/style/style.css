@@ -133,7 +133,7 @@ nav li{
     background-image: url('../img/img-3.png');
     background-size: cover;
     background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;;
+    transition: background-image 1s ease-in-out;
 }
 
 .container-banner-indicator {
