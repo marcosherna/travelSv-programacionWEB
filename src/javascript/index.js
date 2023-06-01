@@ -46,6 +46,7 @@ const addImgCarousel = ()=>{
     }
     home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;
 }
+
 const checkIndicatorCarousel = (index, length) => {
     const indicator = indicatorItemCarousel[index];
     indicator.style.backgroundColor ='#FFBC11';
