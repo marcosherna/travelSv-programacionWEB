@@ -1,4 +1,4 @@
-const banner = document.querySelector('.banner');
+//const banner = document.querySelector('.banner');
 
 const links = document.querySelectorAll('a');
 const container = document.querySelector('main');
@@ -13,9 +13,11 @@ const navHover = document.querySelector('.nav-hover');
 const navItems = document.querySelectorAll('li');
 const navTextSelection = document.querySelector('.nav-text-selection');
 
+const indicatorItemCarousel = document.querySelectorAll('.indicator-item');
+
+
 const imagenes =  [];
-
-
+indicatorItemCarousel[0].style.backgroundColor = '#FFBC11';
 
 
 
@@ -44,31 +46,42 @@ const addImgCarousel = ()=>{
     }
     home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;
 }
+const checkIndicatorCarousel = (index, length) => {
+    const indicator = indicatorItemCarousel[index];
+    indicator.style.backgroundColor ='#FFBC11';
+
+    indicatorItemCarousel[( index != 0)? index-1 : length-1]
+        .style.backgroundColor = '#fff';
+
+
+   indicatorItemCarousel[( index != length-1)? index+1 : 0]
+        .style.backgroundColor = '#fff';
+}
 
 addImgCarousel();
 buttons.forEach( btn => {
 
     btn.addEventListener('click', function () {
-
         if(this.getAttribute('id') == 'next'){
             selectedItemCarousel = (selectedItemCarousel == imagenes.length-1) ? 
                             0 : selectedItemCarousel+1;
 
             home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;
+            
         } else {
 
             selectedItemCarousel = (selectedItemCarousel == 0) ? 
                             imagenes.length : selectedItemCarousel;
 
             selectedItemCarousel--;
-            home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;    
+            home.style.backgroundImage = `url(${imagenes[selectedItemCarousel].src})`;
         }
-
+        checkIndicatorCarousel(selectedItemCarousel, imagenes.length);
         activeLoader();
     })
 });
 
-
+/*
 banner.addEventListener('click', function () {
     if (this.style.height == '50px') {
         this.style.height = '80%';
@@ -79,7 +92,7 @@ banner.addEventListener('click', function () {
         this.style.transition = 'all .4s ease-in'
     }
 })
-
+*/
 
 let index = 0;
 links.forEach(link => {

@@ -169,13 +169,14 @@ nav li{
 }
 
 
-.indicator-list div {
+.indicator-list div{
     width: 17px;
     height: 17px;
-    background-color: #FFBC11;
+    background-color: #FDFEFE;
     border-radius: 50%;
     box-shadow: var(--var-box-shadows);
 }
+
 
 .container-buttom input,
 .indicator-list div,
