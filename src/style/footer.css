@@ -1,0 +1,120 @@
+.piePagina {
+  background-color: #242121;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.piePagina .logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.piePagina h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.piePagina ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.piePagina ul li a:hover {
+  color: #0A837F;
+  text-decoration: none;
+}
+
+.piePagina a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.piePagina .Contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.piePagina .Contacto ul li a {
+  display: flex;
+  gap: .3rem;
+}
+
+.piePagina .contact-icons li {
+  padding-bottom: 1rem;
+}
+
+.piePagina .seccion2,
+.piePagina .encabezado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.piePagina .encabezado {
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.piePagina .Redes .social-media-icons,
+.piePagina .Pagos ul > li,
+.piePagina .Enlaces ul > li,
+.piePagina .Nosotros ul > li {
+  padding-top: 1rem;
+}
+
+.piePagina .social-media-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  place-items: center;
+  padding: 0 1rem;
+}
+
+.piePagina .social-media-icons > .icon {
+  background-color: #3E3D3D;
+  padding: .3rem;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.piePagina .payment-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.piePagina .payment-images img {
+  height: 70px;
+}
+
+.piePagina .terminos {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.piePagina .footer-links {
+  display: flex;
+  gap: .7rem;
+}
+
+.piePagina .footer-links a:hover {
+  color: #0A837F;
+}
