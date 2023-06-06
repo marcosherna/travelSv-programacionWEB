@@ -27,7 +27,9 @@
   list-style: none;
 }
 
-.piePagina ul li a:hover {
+.piePagina .Pagos ul a:hover,
+.piePagina .Enlaces ul a:hover,
+.piePagina .Nosotros ul a:hover{
   color: #0A837F;
   text-decoration: none;
 }
@@ -48,7 +50,7 @@
   padding: 0 2rem;
 }
 
-.piePagina .Contacto ul li a {
+.piePagina .Contacto ul a {
   display: flex;
   gap: .3rem;
 }
@@ -64,16 +66,21 @@
   flex-direction: column;
 }
 
+
 .piePagina .encabezado {
   flex-direction: row;
   gap: 1rem;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
+
+
 .piePagina .Redes .social-media-icons,
-.piePagina .Pagos ul > li,
-.piePagina .Enlaces ul > li,
-.piePagina .Nosotros ul > li {
+.piePagina .Pagos ul > a,
+.piePagina .Enlaces ul > a,
+.piePagina .Nosotros ul > a,
+.piePagina .Contacto ul > a {
   padding-top: 1rem;
 }
 
@@ -96,7 +103,7 @@
   display: flex;
   gap: 2rem;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 4rem 0;
 }
 
 .piePagina .payment-images img {
@@ -108,6 +115,7 @@
   height: 100%;
   align-items: flex-end;
   justify-content: center;
+  margin-top: -10px;
 }
 
 .piePagina .footer-links {
