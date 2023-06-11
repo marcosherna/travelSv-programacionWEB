@@ -1,4 +1,5 @@
   class Usuario {
+  
     constructor(Nombre, Apellido,Email,contraseña,telefono,pais,fechaNacimiento,genero) {
       this.nombre = Nombre;
       this.apellido = Apellido;
@@ -9,17 +10,17 @@
       this.fechaNacimiento = fechaNacimiento;
       this.genero = genero;
     }
-}
+
    // Agrega métodos adicionales o propiedades según tus necesidades
-    // get EmailUsuario(){
-    //     return this.Email;
-    // }
+    get EmailUsuario(){
+         return this.Email;
+    }
     // set EmailUsuario(EmailUser){
     //     this.Email = EmailUser;
     // }
-    // get ContraseñaUsuario(){
-    //     return this.contraseña;
-    // }
+    get ContraseñaUsuario(){
+         return this.contraseña;
+    }
     // set ContraseñaUsuario(ContraUser){
     //     return this.contraseña;
     // }
@@ -42,3 +43,4 @@
     //     this.Genero = GeneroUser;
     // }
 
+}

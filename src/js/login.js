@@ -4,12 +4,14 @@ function  validarPassword(){
     var mensajeError = document.getElementById("mensajeError");
     var remenberCheckbox = document.getElementById("checkbox");
 
+    // creando una instanacia de la clase usuario
+    const usuario = new Usuario();
     //Vlaidar si la contraseña cumple con los requisitos
     if(username === "" || password === ""){
         mensajeError.textContent = "Ingresa el usuario y la contraseña.";
     }else{
         //Realizar la logica de validacion adicional si es correcto
-        if(username === "usuario" && password === "1234"){
+        if(username === "c" && password === "1234"){
             // si el usuario y contraseña son corectos entrara a la pagina
             mensajeError.textContent = "¡ Login exitoso!";
             //

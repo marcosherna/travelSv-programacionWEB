@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">Registration</div>
+        <div class="title">REGISTRATION</div>
         <form id="formulario-registro">
             <div class="user-details">
                 <div class="input-box">
@@ -40,19 +40,20 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Telefono</span>
-                    <input type="text" id="inputTelefono" placeholder="Ingrese su número de Telefono " required>
+                    <input type="text" id="inputTelefono" placeholder="Ingrese su Telefono " required>
                 </div>
                 <div class="input-box">
                     <span class="details">Pais</span>
                     <input type="text" id="inputPais" placeholder="Ingrese su pais de residencia" required>
                 </div>
+                <!-- //fecha Nacimiento -->
                 <div class="input-box">
                     <span class="details">Fecha de Nacimiento</span>
-                    <input type="date" name="date" value="date" placeholder="dia/mes/año">
+                    <input type="date" id="date" name="date" value="date">
                 </div>
                 <div class="input-box">
                     <span class="details">Genero</span>
-                    <select name="Genero">
+                    <select id="genero" name="Genero">
                         <option value="SELECCION">SELECCIONE UNA OPCION</option>
                         <option value="MASCULINO">Masculino</option>
                         <option value="FEMENINO">Femenino</option>
@@ -62,11 +63,11 @@
             </div>
             <!-- /*CAMBIA AL SIGUIENTE DIV PARA EL BOTON*/ -->
             <div class="input-field">
-                    <input  onclick=" RegistroUsuario()" type="submit" class="submit" value="Login"></input>
+                    <input  onclick=" RegistroUsuario()" type="submit" class="submit" value="CREATE ACOUNT"></input>
             </div>
             <div class="politicas">
-                <label>Al  iniciar sesion para crear la cuenta  acepto el</label><br>
-                <label><a href="#">Termino de uso y politicas de privacidad</a></label>
+                <label>Al  iniciar sesion para crear la cuenta  acepto el <a href="#">Termino de uso y politicas de privacidad</a></label><br>
+               
             </div>
         </form>
     </div>
