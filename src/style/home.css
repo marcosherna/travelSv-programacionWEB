@@ -1,0 +1,121 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+
+.nav-customer{
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: .7rem 2rem;
+}
+
+#Home .cr-container, 
+.cr-container .cr-container-items,
+.cr-container .carousel-item > div{
+    height: 100%;
+}
+
+#Destinos, #Galeria, #About, #Contactanos{
+    background-color: whitesmoke;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+#Destinos{
+    height: fit-content;
+}
+
+#Destinos .container .row > .col> .btn-custom{
+    border-radius: 50%;
+    background-color: #FFBC11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: aliceblue;
+    height: 50px;
+    width: 50px;
+}
+
+#Destinos .container .row > .col> .btn-custom:nth-child(1){
+    background-color: aliceblue;
+    color: black;
+}
+
+#Destinos .container-destinos{
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.container-destinos .card-custom{
+    max-width: 27%;
+    height: 60%;
+    padding: .7rem;
+    min-width: 300px;
+}
+
+.card-destino img{
+    width: 100%;
+}
+
+#Galeria{
+    background-color: whitesmoke;
+    height: fit-content;
+}
+
+#About{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-section-about{
+    transform: rotate(270deg);
+}
+
+.btn-section-about:hover{
+    transform: rotate(270deg);
+    color: #FFBC11;
+}
+
+
+
+
+.container-contact-right {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0
+}
+.container-contact {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+.shadow-lg, .shadow-lg--on-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(132,138,163,0.1);
+}
+
+@media (min-width: 1024px) {
+    .container-contact-right {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container-contact {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .container-contact-fom {
+        padding: 5rem !important
+    }
+}
