@@ -77,6 +77,7 @@ section{
 }
 
 .btn-section-about{
+    cursor: pointer;
     transform: rotate(270deg);
 }
 
@@ -84,9 +85,6 @@ section{
     transform: rotate(270deg);
     color: #FFBC11;
 }
-
-
-
 
 .container-contact-right {
     overflow: hidden;
@@ -97,8 +95,23 @@ section{
     border-radius: 0 0 .625rem .625rem
 }
 
-.shadow-lg, .shadow-lg--on-hover:hover {
-    box-shadow: 0 1rem 3rem rgba(132,138,163,0.1);
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.section-about {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.active-section-about{
+    display: block;
+    opacity: 1;
 }
 
 @media (min-width: 1024px) {
