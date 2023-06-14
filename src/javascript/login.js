@@ -14,12 +14,12 @@ function  validarPassword(){
         if(username === "c" && password === "1234"){
             // si el usuario y contraseña son corectos entrara a la pagina
             mensajeError.textContent = "¡ Login exitoso!";
+            window.location.href = "index.html";
             //
             if (checkbox.remenberCheckbox) {
                 // Crear una cookie con el nombre de usuario que expira en 30 días
                 document.cookie = `username=${username}; expires=${getCookieExpirationDate(30)}`;
               }
-            window.location.href = "count.html";
         }else{
             mensajeError.textContent = "Credenciales invalidas";
         }

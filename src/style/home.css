@@ -120,8 +120,6 @@ section{
         padding: 5rem !important
     }
 }
-
-
 @media (min-width: 1024px) {
     .container-contact {
         border-radius: .625rem 0 .625rem .625rem
@@ -130,5 +128,10 @@ section{
 @media (min-width: 1024px) {
     .container-contact-fom {
         padding: 5rem !important
+    }
+    .carousel-indicators{
+        height: 0%;
+        margin-top:80% ;
+
     }
 }
