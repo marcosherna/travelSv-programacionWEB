@@ -1,0 +1,29 @@
+
+#About{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-section-about{
+    cursor: pointer;
+    transform: rotate(270deg);
+}
+
+.btn-section-about:hover{
+    transform: rotate(270deg);
+    color: #FFBC11;
+}
+
+.section-about {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .section-about.active-section-about {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+

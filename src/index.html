@@ -14,6 +14,8 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <link rel="stylesheet" type="text/css" href="style/styles.css">
+  <link rel="stylesheet" type="text/css" href="style/gallery.css">
+  <link rel="stylesheet" type="text/css" href="style/about.css">
 
   <!--Iconos--->
   <script src="https://kit.fontawesome.com/eb496ab1a0.js"></script>
@@ -100,13 +102,16 @@
   </section>
 
   <section id="Destinos">
+    <div id="alertContainer"></div>
     <div class="container w-100 h-100">
-      <div class="row w-100 d-flex align-items-center ">
+      <div class="row w-100 d-flex align-items-center">
         <div class="col-10 ">
 
           <h2>Destinos recientes</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur placeat, nihil
-            assumenda delectus sit est, cumque </p>
+          <p>Descubre los destinos turísticos más recientes y emocionantes de El Salvador, 
+            donde la belleza natural se combina con la autenticidad cultural para ofrecerte experiencias únicas. 
+            Estos son algunos de los destinos más populares que han surgido recientemente en este encantador país 
+            centroamericano.</p>
         </div>
       </div>
 
@@ -166,93 +171,94 @@
                     </div>
                   </div>
                   <!-- Destinos items -->
-                  <!-- Modal Detalle Destino-->
-                  <div class="modal fade" id="detalleDestino" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                      <div class="modal-content">
-                        <div class="modal-body">
+                  
 
-                          <div class="d-flex align-items-center sw-100">
-                            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                              aria-label="Close"></button>
-                          </div>
-                          <div class="row">
-                            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                              <h1 class="display-4">Destino</h1>
-                              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus
-                                asperiores rem reiciendis ex? Atque similique maxime unde, perferendis distinctio eius
-                                voluptatem doloribus quaerat accusantium, fugiat incidunt! Inventore, a doloremque?</p>
-                            </div>
+                </div>
+                <!-- Modal Detalle Destino-->
+                <div class="modal fade" id="detalleDestino" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-body">
 
-                            <div class="row">
-                              <div class="col-lg-4 d-lg-block">
-                                <div class="card mb-4">
-                                  <!-- Contenido de la tarjeta basico -->
-                                  <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Basico</h4>
-                                  </div>
-                                  <div class="card-body">
-                                    <h1 class="card-title pricing-card-title">$0</h1>
-                                    <ul class="list-unstyled mt-3 mb-4">
-                                      <li>Lorem ipsum dolor</li>
-                                      <li>Lorem ipsum do</li>
-                                      <li>Lorem ipsum </li>
-                                      <li>Lorem ipsum dolor</li>
-                                    </ul>
-                                    <button type="button"
-                                      class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-lg-4 d-lg-block">
-                                <div class="card mb-4">
-                                  <!-- Contenido de la tarjeta premiun-->
-                                  <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Premiun</h4>
-                                  </div>
-                                  <div class="card-body">
-                                    <h1 class="card-title pricing-card-title">$0</h1>
-                                    <ul class="list-unstyled mt-3 mb-4">
-                                      <li>Lorem ipsum dolor</li>
-                                      <li>Lorem ipsum do</li>
-                                      <li>Lorem ipsum </li>
-                                      <li>Lorem ipsum dolor</li>
-                                    </ul>
-                                    <button type="button"
-                                      class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-lg-4 d-lg-block">
-                                <div class="card mb-4">
-                                  <!-- Contenido de la tarjeta vip -->
-                                  <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Vip</h4>
-                                  </div>
-                                  <div class="card-body">
-                                    <h1 class="card-title pricing-card-title">$0</h1>
-                                    <ul class="list-unstyled mt-3 mb-4">
-                                      <li>Lorem ipsum dolor</li>
-                                      <li>Lorem ipsum do</li>
-                                      <li>Lorem ipsum </li>
-                                      <li>Lorem ipsum dolor</li>
-                                    </ul>
-                                    <button type="button"
-                                      class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
-                                  </div>
-                                </div>
-                              </div>
-
-                            </div>
-
-                          </div>
+                      <div class="d-flex align-items-center sw-100">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="row">
+                        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                          <h1 id="nombre" class="display-4">Destino</h1>
+                          <p id="descripcion" class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus
+                            asperiores rem reiciendis ex? Atque similique maxime unde, perferendis distinctio eius
+                            voluptatem doloribus quaerat accusantium, fugiat incidunt! Inventore, a doloremque?</p>
                         </div>
+
+                        <div class="row paquetes">
+                          <div class="col-lg-4 d-lg-block">
+                            <div class="card mb-4">
+                              <!-- Contenido de la tarjeta basico -->
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Basico</h4>
+                              </div>
+                              <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$0</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                  <li>Lorem ipsum dolor</li>
+                                  <li>Lorem ipsum do</li>
+                                  <li>Lorem ipsum </li>
+                                  <li>Lorem ipsum dolor</li>
+                                </ul>
+                                <button type="button"
+                                  class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 d-lg-block">
+                            <div class="card mb-4">
+                              <!-- Contenido de la tarjeta premiun-->
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Premiun</h4>
+                              </div>
+                              <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$0</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                  <li>Lorem ipsum dolor</li>
+                                  <li>Lorem ipsum do</li>
+                                  <li>Lorem ipsum </li>
+                                  <li>Lorem ipsum dolor</li>
+                                </ul>
+                                <button type="button"
+                                  class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 d-lg-block">
+                            <div class="card mb-4">
+                              <!-- Contenido de la tarjeta vip -->
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Vip</h4>
+                              </div>
+                              <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$0</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                  <li>Lorem ipsum dolor</li>
+                                  <li>Lorem ipsum do</li>
+                                  <li>Lorem ipsum </li>
+                                  <li>Lorem ipsum dolor</li>
+                                </ul>
+                                <button type="button"
+                                  class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
                       </div>
                     </div>
                   </div>
-
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -276,46 +282,96 @@
 
     </div>
   </section>
+
   <section id="Galeria">
     <div class="container w-100 h-100">
-      <div class="row w-100 d-flex align-items-center ">
-        <div class="col-10 ">
-
+      <div class="row w-100 d-flex align-items-center mb-4">
+        <div class="col-10">
           <h2>Top Destinos</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur placeat, nihil
-            assumenda delectus sit est, cumque </p>
+          <p>El Salvador, un país lleno de encanto y diversidad, ofrece a los viajeros una variedad de destinos turísticos 
+            que impresionan por su belleza natural, su rica historia y su cultura vibrante. Desde playas paradisíacas 
+            hasta impresionantes volcanes, aquí hay una selección de los mejores destinos turísticos que no te puedes 
+            perder en El Salvador. </p>
         </div>
       </div>
-
+  
       <!-- Gallery -->
       <div class="row">
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+          <div class="gallery-item w-100 shadow-1-strong rounded mb-4">
+            <img src="img/decameron.jpg"class="w-100" alt="Boat on Calm Water" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Información de la imagen</h3>
+                <p>Descripción de la imagen</p>
+                <i class="fas fa-star"></i> Puntuación: 4.5
+              </div>
+            </div>
+          </div>
+  
+          <div class="gallery-item w-100 shadow-1-strong rounded mb-4">
+            <img src="img/albania.jpg" class="w-100" alt="Wintry Mountain Landscape" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Información de la imagen</h3>
+                <p>Descripción de la imagen</p>
+                <i class="fas fa-star"></i> Puntuación: 4.5
+              </div>
+            </div>
+          </div>
         </div>
-
+  
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
-
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+          <div class="gallery-item w-100 shadow-1-strong rounded mb-4">
+            <img src="img/costadelsolgrande.jpg" class="w-100" alt="Mountains in the Clouds" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Información de la imagen</h3>
+                <p>Descripción de la imagen</p>
+                <i class="fas fa-star"></i> Puntuación: 4.5
+              </div>
+            </div>
+          </div>
+  
+          <div class="gallery-item w-100 shadow-1-strong rounded mb-4">
+            <img src="img/tazumal.jpg" class="w-100" alt="..." />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Información de la imagen</h3>
+                <p>Descripción de la imagen</p>
+                <i class="fas fa-star"></i> Puntuación: 4.5
+              </div>
+            </div>
+          </div>
         </div>
-
+  
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+          <div class="gallery-item w-100 shadow-1-strong rounded mb-4">
+            <img src="img/sansivar.jpg" class="w-100" alt="..." />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Información de la imagen</h3>
+                <p>Descripción de la imagen</p>
+                <i class="fas fa-star"></i> Puntuación: 4.5
+              </div>
+            </div>
+          </div>
+  
+          <div class="gallery-item w-100 shadow-1-strong rounded mb-4">
+            <img src="img/suchitoto.jpg" class="w-100" alt="Yosemite National Park" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Información de la imagen</h3>
+                <p>Descripción de la imagen</p>
+                <i class="fas fa-star"></i> Puntuación: 4.5
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
   </section>
+  
   <section id="Contactanos">
     <div class="container">
       <div class="container-contact mt-n9 box-shadow">
@@ -389,29 +445,27 @@
         <div class="row w-100 h-100">
           <div class="col-1 d-flex flex-column justify-content-center">
             <div class="row align-items-center">
-              <h4 class="btn-section-about mision">Misión</h4>
+              <h4 class="btn-section-about mision fade-in-about">Misión</h4>
             </div>
             <div class="row align-items-center pt-5">
-              <h4 class="btn-section-about vision">Visión</h4>
+              <h4 class="btn-section-about vision fade-in-about">Visión</h4>
             </div>
           </div>
           <div class="col d-flex align-items-center">
             <div class="p-5">
               <div id="section-mision" class="section-about active-section-about">
-                <h2>Misión</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi perferendis qui voluptas,
-                  sit facilis consectetur a cupiditate exercitationem quae ab cum doloremque temporibus rem, nobis
-                  placeat. Asperiores, modi deleniti!
-                  Facilis molestiae temporibus dignissimos dolore expedita delectus, sint autem nulla mollitia ipsa
-                  perspiciatis vitae quaerat minima, enim reprehenderit atque nesciunt tenetur non accusantium hic
-                  consequatur! Enim minima voluptatibus porro deleniti!</p>
+                <h2 class="fade-in">Misión</h2>
+                <p class="fade-in">La misión de nuestra empresa de viajes es proporcionar experiencias únicas y memorables 
+                  a los clientes, ofreciendo servicios de alta calidad que les permitan disfrutar plenamente 
+                  de los destinos turísticos y culturales que visitan.</p>
                 <h1 class="text-end number-page">01</h1>
               </div>
-              <div id="section-vision" class="section-about">
-                <h2>Visión</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum soluta qui, sequi beatae
-                  veniam nisi sit totam optio earum deserunt quo temporibus voluptatum, doloremque
-                  corrupti. Porro nesciunt explicabo nam quibusdam.</p>
+              <div id="section-vision" class="section-about ">
+                <h2 class="fade-in" >Visión</h2>
+                <p class="fade-in">Ser la empresa líder en la industria de viajes turísticos, 
+                  ofreciendo experiencias únicas y auténticas en todo el mundo, al tiempo que nos aseguramos de minimizar 
+                  nuestro impacto en el medio ambiente y contribuir al desarrollo económico y social de las
+                  comunidades locales en las que operamos.</p>
                 <h1 class="text-end number-page">02</h1>
               </div>
             </div>
@@ -508,11 +562,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-
+    <script src="./model/dbContext.js"></script>
   <script src="./javascript/script.js"></script>
-
-
-
 </body>
 
 </html>
