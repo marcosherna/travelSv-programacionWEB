@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/stylesFormulario.css">
+    <script src="javascript/registro.js"></script>
+    <script src="javascript/usuario.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>Count</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">REGISTRATION</div>
+        <form id="formulario-registro">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nombre</span>
+                    <input type="text" id="inputNombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Apellido</span>
+                    <input type="text" id="inputApellido" placeholder="Ingrese su Apellido" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" id="input_Email" placeholder="Ingrese su correo" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contraseña</span>
+                    <input type="text" id="inputContraseña" placeholder="Ingrese su contraseña " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirma Contraseña</span>
+                    <input type="text" id="inputConfirmarContraseña" placeholder="Confirme su contraseña" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Telefono</span>
+                    <input type="text" id="inputTelefono" placeholder="Ingrese su Telefono " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Pais</span>
+                    <input type="text" id="inputPais" placeholder="Ingrese su pais de residencia" required>
+                </div>
+                <!-- //fecha Nacimiento -->
+                <div class="input-box">
+                    <span class="details">Fecha de Nacimiento</span>
+                    <input type="date" id="date" name="date" value="date">
+                </div>
+                <div class="input-box">
+                    <span class="details">Genero</span>
+                    <select id="genero" name="Genero">
+                        <option value="SELECCION">SELECCIONE UNA OPCION</option>
+                        <option value="MASCULINO">Masculino</option>
+                        <option value="FEMENINO">Femenino</option>
+                        <option value="FEMENINO">Otro</option>
+                     </select>
+                </div>
+            </div>
+            <!-- /*CAMBIA AL SIGUIENTE DIV PARA EL BOTON*/ -->
+            <div class="input-field">
+                    <input  onclick=" RegistroUsuario()" href="login.html" type="submit" class="submit" value="CREATE ACOUNT"></input>
+            </div>
+            <div class="politicas">
+                <label>Al  iniciar sesion para crear la cuenta  acepto el <a href="#">Termino de uso y politicas de privacidad</a></label><br>
+               
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+
+.nav-customer{
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: .7rem 2rem;
+}
+
+#Home .cr-container, 
+.cr-container .cr-container-items,
+.cr-container .carousel-item > div{
+    height: 100%;
+}
+
+#Destinos, #Galeria, #About, #Contactanos{
+    background-color: whitesmoke;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+#Destinos{
+    height: fit-content;
+}
+
+#Destinos .container .row > .col> .btn-custom{
+    border-radius: 50%;
+    background-color: #FFBC11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: aliceblue;
+    height: 50px;
+    width: 50px;
+}
+
+#Destinos .container .row > .col> .btn-custom:nth-child(1){
+    background-color: aliceblue;
+    color: black;
+}
+
+#Destinos .container-destinos{
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.container-destinos .card-custom{
+    max-width: 27%;
+    height: 60%;
+    padding: .7rem;
+    min-width: 300px;
+}
+
+.card-destino img{
+    width: 100%;
+}
+
+#Galeria{
+    background-color: whitesmoke;
+    height: fit-content;
+}
+
+#About{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-section-about{
+    cursor: pointer;
+    transform: rotate(270deg);
+}
+
+.btn-section-about:hover{
+    transform: rotate(270deg);
+    color: #FFBC11;
+}
+
+.container-contact-right {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0
+}
+.container-contact {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.section-about {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.active-section-about{
+    display: block;
+    opacity: 1;
+}
+
+@media (min-width: 1024px) {
+    .container-contact-right {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+@media (min-width: 1024px) {
+    .container-contact {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .container-contact-fom {
+        padding: 5rem !important
+    }
+    .carousel-indicators{
+        height: 0%;
+        margin-top:80% ;
+
+    }
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+
+.nav-customer{
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: .7rem 2rem;
+}
+
+#Home .cr-container, 
+.cr-container .cr-container-items,
+.cr-container .carousel-item > div{
+    height: 100%;
+}
+
+#Destinos, #Galeria, #About, #Contactanos{
+    background-color: whitesmoke;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+#Destinos{
+    height: fit-content;
+}
+
+#Destinos .container .row > .col> .btn-custom{
+    border-radius: 50%;
+    background-color: #FFBC11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: aliceblue;
+    height: 50px;
+    width: 50px;
+}
+
+#Destinos .container .row > .col> .btn-custom:nth-child(1){
+    background-color: aliceblue;
+    color: black;
+}
+
+#Destinos .container-destinos{
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.container-destinos .card-custom{
+    max-width: 27%;
+    height: 60%;
+    padding: .7rem;
+    min-width: 300px;
+}
+
+.card-destino img{
+    width: 100%;
+}
+
+#Galeria{
+    background-color: whitesmoke;
+    height: fit-content;
+}
+
+#About{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-section-about{
+    cursor: pointer;
+    transform: rotate(270deg);
+}
+
+.btn-section-about:hover{
+    transform: rotate(270deg);
+    color: #FFBC11;
+}
+
+.container-contact-right {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0;
+    background: rgb(7,100,97);
+    --u: 2vmin; 
+	--c1: #0A837F;
+    --c2: #076461;
+	--s1: #0002;
+  --gp: 50%/calc(var(--u) * 10) calc(var(--u) * 10);
+	background: 
+		repeating-conic-gradient(from 0deg at 50% 13.75%, var(--s1) 0 20.55%, #fff0 21.05% 79.13%, var(--s1) 79.63% 100% ) var(--gp), 
+		repeating-conic-gradient(from 0deg at 50% 50%, #fff0 0 25%, var(--s1) 25% 29%, #fff0 30% 70%, var(--s1) 71% 75%, #fff0 75% 100%) var(--gp), 
+		repeating-conic-gradient(from 0deg at 50% 50%, var(--c1) 0 25%, var(--c2) 0% 50%, var(--c1) 0 75%, var(--c2) 0% 100% ) var(--gp);
+}
+.container-contact {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.section-about {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.active-section-about{
+    display: block;
+    opacity: 1;
+}
+
+/*animacion de la seccion de contactos*/
+ .container-contact {
+    opacity: 0;
+    transform: translateY(40%);
+    transition: opacity 0.7s ease-in-out, transform 0.3s ease;
+}
+.container-contact.show {
+    opacity: 1;
+    transform: translateY(0);
+} 
+/* end */
+
+
+/*animacion de la seccion destinos*/
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in:nth-child(1){ transition-delay: 0.2s;}
+.fade-in:nth-child(2){transition-delay: 0.4s;}
+.fade-in:nth-child(3){transition-delay: 0.6s;}
+/* end */
+
+@media (min-width: 1024px) {
+    .container-contact-right {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container-contact {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .container-contact-fom {
+        padding: 5rem !important
+    }
+}
