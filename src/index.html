@@ -7,47 +7,487 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-    <title>Login</title>
+    <link rel="stylesheet" href="./style/home.css">
+    <title>Travel SV</title>
 </head>
 
 <body>
-    <div class="box">
-        <div class="container">
-            <div class="top-header">
-                <header>LOGIN</header>
+
+    <nav class="navbar navbar-expand-lg  position-fixed w-100 bg-transparent z-1">
+        <div class="container-fluid  bg-body-tertiary nav-customer">
+            <a class="navbar-brand" href="#">Travel SV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Destinos">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Galeria">Galeria</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Sobre Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#Contactanos">Contactanos</a></li>
+                            <li><a class="dropdown-item" href="#About">Mision</a></li>
+                            <li><a class="dropdown-item" href="#About">Vison</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div class="input-field" id="UsuarioName">
-                <input type="text" id="UsernameInput" class="input" placeholder="Username" required>
-                <i class='bx bx-user' ></i>
+        </div>
+    </nav>
+
+    <section id="Home">
+        <div id="carouselDestinos" class="carousel slide cr-container">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
             </div>
-            <div class="input-field">
-                <input type="password" id="passwordInput" class="input" placeholder="password" required>
-                <i class='bx bx-lock-alt'></i>
-            </div>
-            <div class="input">
-                <input onclick="validarPassword()" href="count.html" type="submit" class="submit" value="LOGIN">
-                <p id="mensajeError"></p>
-            </div>
-            <div class="left" >
-                <input type="checkbox" id="checkbox">
-                <label for="check"> Remenber Me </label>
-            </div>
-            <div class="bottom"> 
-                <div class="link1">
-                    <a href="#">CHANGE PASSWORD</a>
-                    <a href="#">FORGOT PASSWORD</a>
+            <div class="carousel-inner cr-container-items">
+                <div class="carousel-item active">
+                    <img src="./img/img-1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
                 </div>
-                <div class="separator"></div>
-                <div class="link2">
-                    <a href="count.html">CREATE ACCOUNT</a>
+                <div class="carousel-item">
+                    <img src="./img/img-2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img-3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/img-4.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img-5.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section id="Destinos">
+        <div class="container w-100 h-100">
+            <div class="row w-100 d-flex align-items-center ">
+                <div class="col-10 ">
+
+                    <h2>Destinos recientes</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur placeat, nihil
+                        assumenda delectus sit est, cumque </p>
+                </div>
+                <!-- <div class="col">
+                    <button class="btn btn-custom"><- </button>
+                            <button class="btn btn-custom">-></button>
+                </div> -->
+            </div>
+
+            <div class="container-destinos pt-4">
+                <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center"
+                    data-mdb-ride="carousel">
+                    <div class="carousel-inner py-4">
+                        <!-- Destinos recientes-->
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <!-- Destinos items -->
+                                <div class="row">
+                                    <div class="col-lg-4 d-lg-block fade-in">
+                                        <div class="card">
+                                            <img src="./img/img-1.png" class="card-img-top" alt="Waterfall" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Nombre</h5>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up the
+                                                    bulk
+                                                    of the card's content.
+                                                </p>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#detalleDestino">Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4  d-lg-block fade-in">
+                                        <div class="card">
+                                            <img src="./img/img-1.png" class="card-img-top" alt="" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Nombre</h5>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up the
+                                                    bulk
+                                                    of the card's content.
+                                                </p>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#detalleDestino">Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 d-none d-lg-block fade-in">
+                                        <div class="card">
+                                            <img src="./img/img-1.png" class="card-img-top" alt="" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Nombre</h5>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up the
+                                                    bulk
+                                                    of the card's content.
+                                                </p>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#detalleDestino">Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Destinos items -->
+                                    <!-- Modal Detalle Destino-->
+                                    <div class="modal fade" id="detalleDestino" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <!-- <div class="modal-header">
+                                                    
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div> -->
+                                                <div class="modal-body">
+
+                                                    <div class="d-flex align-items-center sw-100">
+                                                        <button type="button" class="btn-close ms-auto"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                                                            <h1 class="display-4">Destino</h1>
+                                                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus asperiores rem reiciendis ex? Atque similique maxime unde, perferendis distinctio eius voluptatem doloribus quaerat accusantium, fugiat incidunt! Inventore, a doloremque?</p>
+                                                        </div>
+                                                    
+                                                        <div class="row">
+                                                            <div class="col-lg-4 d-lg-block">
+                                                                <div class="card mb-4">
+                                                                    <!-- Contenido de la tarjeta Free -->
+                                                                    <div class="card-header">
+                                                                        <h4 class="my-0 font-weight-normal">Basico</h4>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h1 class="card-title pricing-card-title">$0</h1>
+                                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                                            <li>Lorem ipsum dolor</li>
+                                                                            <li>Lorem ipsum do</li>
+                                                                            <li>Lorem ipsum </li>
+                                                                            <li>Lorem ipsum dolor</li>
+                                                                        </ul>
+                                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 d-lg-block">
+                                                                <div class="card mb-4">
+                                                                    <!-- Contenido de la tarjeta Free -->
+                                                                    <div class="card-header">
+                                                                        <h4 class="my-0 font-weight-normal">Premiun</h4>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h1 class="card-title pricing-card-title">$0</h1>
+                                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                                            <li>Lorem ipsum dolor</li>
+                                                                            <li>Lorem ipsum do</li>
+                                                                            <li>Lorem ipsum </li>
+                                                                            <li>Lorem ipsum dolor</li>
+                                                                        </ul>
+                                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 d-lg-block">
+                                                                <div class="card mb-4">
+                                                                    <!-- Contenido de la tarjeta Free -->
+                                                                    <div class="card-header">
+                                                                        <h4 class="my-0 font-weight-normal">Vip</h4>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h1 class="card-title pricing-card-title">$0</h1>
+                                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                                            <li>Lorem ipsum dolor</li>
+                                                                            <li>Lorem ipsum do</li>
+                                                                            <li>Lorem ipsum </li>
+                                                                            <li>Lorem ipsum dolor</li>
+                                                                        </ul>
+                                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Reservar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- <div class="card-deck mb-3 text-center d-flex flex-wrap">
+                                                                <div class="card mb-4 box-shadow">
+                                                                    
+                                                                </div>
+                                                                <div class="card mb-4 box-shadow">
+                                                                     Contenido de la tarjeta Pro
+                                                                    <div class="card-header">
+                                                                        <h4 class="my-0 font-weight-normal">Pro</h4>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h1 class="card-title pricing-card-title">$15<small class="text-muted">/ mo</small></h1>
+                                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                                            <li>20 users included</li>
+                                                                            <li>10 GB of storage</li>
+                                                                            <li>Priority email support</li>
+                                                                            <li>Help center access</li>
+                                                                        </ul>
+                                                                        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card mb-4 box-shadow">
+                                                                    Contenido de la tarjeta Enterprise 
+                                                                    <div class="card-header">
+                                                                        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h1 class="card-title pricing-card-title">$29<small class="text-muted">/ mo</small></h1>
+                                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                                            <li>30 users included</li>
+                                                                            <li>15 GB of storage</li>
+                                                                            <li>Phone and email support</li>
+                                                                            <li>Help center access</li>
+                                                                        </ul>
+                                                                        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-center mb-4">
+                        <button class="carousel-control-prev position-relative" type="button"
+                            data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next position-relative" type="button"
+                            data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+
+        </div>
+    </section>
+    <section id="Galeria">
+        <div class="container w-100 h-100">
+            <div class="row w-100 d-flex align-items-center ">
+                <div class="col-10 ">
+
+                    <h2>Top Destinos</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consectetur placeat, nihil
+                        assumenda delectus sit est, cumque </p>
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="Contactanos">
+        <div class="container">
+            <div class="container-contact mt-n9 box-shadow">
+                <div class="row no-gutters">
+                    <!-- right -->
+                    <div
+                        class="right col-lg-5 container-contact-right p-5 order-lg-2 d-flex justify-content-center align-items-center d-lg-block d-none">
+                        <!-- Contenido derecho -->
+                    </div>
+                    <!-- left -->
+                    <div
+                        class="col-lg-7 container-contact-fom p-5 order-lg-1 d-flex justify-content-center align-items-center">
+
+                        <form action="#" class="contact-form form-validate" novalidate="novalidate">
+                            <!-- Contenido del formulario -->
+                            <div class="row">
+                                <div class="col-sm-6 mb-3  d-block d-sm-none">
+                                    <div class="form-group">
+                                        <h1>Contactanos</h1>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="firstName">Nombre</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName"
+                                            placeholder="nombre...">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="lastName">Apellido</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName"
+                                            placeholder="apellidos...">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="email">Email</label>
+                                        <input type="text" class="form-control" id="email" name="email"
+                                            placeholder="ejemplo@gmail.com">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="phone">Numero de telefono</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                            placeholder="(503)-454-545">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="message">Has tu comentario</label>
+                                        <textarea class="form-control" id="message" name="message" rows="4"
+                                            placeholder="Comentarios..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mb-3">
+                                    <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About">
+        <div class="container w-100 h-100 d-flex align-items-center">
+            <div class="container-scroll">
+                <div class="row w-100 h-100">
+                    <div class="col-1 d-flex flex-column justify-content-center">
+                        <div class="row align-items-center">
+                            <h4 class="btn-section-about mision">Misión</h4>
+                        </div>
+                        <div class="row align-items-center pt-5">
+                            <h4 class="btn-section-about vision" >Visión</h4>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div class="p-5">
+                            <div id="section-mision" class="section-about active-section-about">
+                                <h2>Misión</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi perferendis qui voluptas, sit facilis consectetur a cupiditate exercitationem quae ab cum doloremque temporibus rem, nobis placeat. Asperiores, modi deleniti!
+                                Facilis molestiae temporibus dignissimos dolore expedita delectus, sint autem nulla mollitia ipsa perspiciatis vitae quaerat minima, enim reprehenderit atque nesciunt tenetur non accusantium hic consequatur! Enim minima voluptatibus porro deleniti!</p>
+                                <h1 class="text-end number-page">01</h1>
+                            </div>
+                            <div id="section-vision" class="section-about">
+                                <h2>Visión</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum soluta qui, sequi beatae
+                                    veniam nisi sit totam optio earum deserunt quo temporibus voluptatum, doloremque
+                                    corrupti. Porro nesciunt explicabo nam quibusdam.</p>
+                                <h1 class="text-end number-page">02</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+        <script src="./javascript/script.js"></script>
+
+
+
 </body>
 
 </html>
