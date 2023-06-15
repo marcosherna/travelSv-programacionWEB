@@ -1,0 +1,278 @@
+.piePagina {
+  background-color: #242121;
+  padding: 4rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+.piePagina .logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.piePagina h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.piePagina ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.piePagina .Pagos ul a:hover,
+.piePagina .Enlaces ul a:hover,
+.piePagina .Nosotros ul a:hover{
+  color: #0A837F;
+  text-decoration: none;
+}
+.piePagina a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+.piePagina .Contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+.piePagina .Contacto ul a {
+  display: flex;
+  gap: .3rem;
+}
+.piePagina .contact-icons li {
+  padding-bottom: 1rem;
+}
+.piePagina .seccion2,
+.piePagina .encabezado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.piePagina .encabezado {
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.piePagina .Redes .social-media-icons,
+.piePagina .Pagos ul > a,
+.piePagina .Enlaces ul > a,
+.piePagina .Nosotros ul > a,
+.piePagina .Contacto ul > a {
+  padding-top: 1rem;
+}
+.piePagina .social-media-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  place-items: center;
+  padding: 0 1rem;
+}
+.piePagina .social-media-icons > .icon {
+  background-color: #3E3D3D;
+  padding: .3rem;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+.piePagina .payment-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.piePagina .payment-images img {
+  height: 70px;
+}
+.piePagina .terminos {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -10px;
+}
+.piePagina .footer-links {
+  display: flex;
+  gap: .7rem;
+}
+.piePagina .footer-links a:hover {
+  color: #0A837F;
+}
+/* Estilos responsivos para celulares */
+@media screen and (max-width: 480px) {
+  .piePagina {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .piePagina .logo {
+    margin-bottom: 1.5rem;
+  }
+  .piePagina ul {
+    text-align: center;
+  }
+  .piePagina .encabezado {
+    flex-direction: column;
+    align-items: center;
+  }
+  .piePagina .Contacto {
+    text-align: center;
+  }
+  .piePagina .social-media-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .piePagina .payment-images {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .piePagina .payment-images img {
+    height: 50px;
+  }
+  .piePagina .terminos {
+    align-items: flex-start;
+    margin-top: 0;
+  }
+  .piePagina .terminos h3 {
+    text-align: left;
+  }
+  .piePagina .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .piePagina > * {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+/* Estilos responsivos para tablets */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .piePagina {
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .piePagina .logo {
+    margin-bottom: 1.5rem;
+  }
+  .piePagina ul {
+    text-align: center;
+  }
+  .piePagina .encabezado {
+    flex-direction: column;
+    align-items: center;
+  }
+  .piePagina .Contacto {
+    text-align: center;
+  }
+  .piePagina .social-media-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .piePagina .payment-images {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .piePagina .payment-images img {
+    height: 50px;
+  }
+  .piePagina .terminos {
+    align-items: flex-start;
+    margin-top: 0;
+  }
+  .piePagina .terminos h3 {
+    text-align: left;
+  }
+  .piePagina .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .piePagina > * {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+/* Estilos responsivos para tablets y pantallas más pequeñas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .piePagina {
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .piePagina .logo {
+    margin-bottom: 1.5rem;
+  }
+  .piePagina ul {
+    text-align: center;
+  }
+  .piePagina .encabezado {
+    flex-direction: column;
+    align-items: center;
+  }
+  .piePagina .Contacto {
+    text-align: center;
+  }
+  .piePagina .social-media-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .piePagina .payment-images {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .piePagina .payment-images img {
+    height: 50px;
+  }
+  .piePagina .terminos {
+    align-items: flex-start;
+    margin-top: 0;
+  }
+  .piePagina .terminos h3 {
+    text-align: left;
+  }
+  .piePagina .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .piePagina > * {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+/* Estilos responsivos para tablets y pantallas más grandes */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .piePagina {
+    padding: 3rem 6rem;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .piePagina {
+    padding: 3rem 8rem;
+  }
+} 
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
+  .piePagina {
+    padding: 3rem 10rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .piePagina {
+    padding: 3rem 14rem;
+  }
+}
