@@ -16,7 +16,54 @@ const indicatorItemCarousel = document.querySelectorAll('.indicator-item');
 
 const contactForm = document.querySelector('.container-contact');
 
+// Obtén las referencias a los elementos del reloj
 
+
+const clock = (date, element) => {
+  const dayElement = element.querySelector('#day');
+  const minutesElement = element.querySelector('#minutes');
+  const hoursElement = element.querySelector('#hours');
+  const secondsElement = element.querySelector('#seconds');
+  // Actualiza el contenido del reloj cada segundo
+  
+  let dates = `${date}`.split('-')
+  setInterval(() => {
+    let proximo = new Date();
+    proximo.setFullYear(dates[0]);
+    proximo.setMonth(dates[1]); // 5 representa el mes de junio (enero es el mes 0)
+    proximo.setDate(dates[2]);
+    // Actualiza el día
+    const day = proximo.toLocaleDateString('es-419', { weekday: 'long' });
+    dayElement.textContent = day;
+
+    // Actualiza los minutos
+    const hours = proximo.getHours().toString().padStart(2, '0');
+    hoursElement.textContent = hours;
+
+    // Actualiza los minutos
+    const minutes = proximo.getMinutes().toString().padStart(2, '0');
+    minutesElement.textContent = minutes;
+
+    // Actualiza los segundos
+    const seconds = proximo.getSeconds().toString().padStart(2, '0');
+    secondsElement.textContent = seconds;
+  }, 1000);
+
+}
+
+
+const loadHome = () => {
+  const proximoEvento = instance.data[1];
+  home.querySelector('#titulo').textContent = proximoEvento.nombre;
+  home.querySelector('#descripcion').textContent = proximoEvento.descripcion
+
+  console.log(proximoEvento);
+  clock(proximoEvento.fechaInicio, home)
+  
+  
+}
+
+loadHome()
 
 const animateElements = (entries, className) => {
   entries.forEach((entry) => {
@@ -60,11 +107,15 @@ const animationAboutSection = (entries) => {
   animateElements(entries, 'fade-in');
 };
 
+const animationHomeSection = (entries) => {
+  animateElements(entries, 'fade-in');
+};
 
 createAnimationObserver(animationDestinySection, destinosSection);
 createAnimationObserver(animationContactSection, contactSection);
 createAnimationObserver(animationGalerySection, gallerySection);
 createAnimationObserver(animationAboutSection, aboutSection);
+createAnimationObserver(animationHomeSection, home);
 
 // botones de la seccion de about 
 btnSectionAbout.forEach(btn => {
@@ -112,6 +163,7 @@ const addImgCarousel = () => {
 }
 
 const checkIndicatorCarousel = (index, length) => {
+  
   const indicator = indicatorItemCarousel[index];
   indicator.style.backgroundColor = '#FFBC11';
 
@@ -187,7 +239,7 @@ const loadDestinos = () => {
   let destinos = Array.from(instance.data);
   carouselDestino.innerHTML = '';
 
-  destinos.forEach( destino => {
+  destinos.forEach(destino => {
     let descripcion = textValidateLength(destino.descripcion, 170);
 
     carouselDestino.innerHTML += `<div class="col-lg-4 d-lg-block mb-4 fade-in">
@@ -225,19 +277,19 @@ btnsDesatalleDestinos.forEach((button, index) => {
 
   const selectedDestination = instance.data[index]
   button.addEventListener('click', () => {
-    modal.querySelector('#nombre').textContent= selectedDestination.nombre;
-    modal.querySelector('#descripcion').textContent= selectedDestination.descripcion;
+    modal.querySelector('#nombre').textContent = selectedDestination.nombre;
+    modal.querySelector('#descripcion').textContent = selectedDestination.descripcion;
 
 
     const paquetes = Array.from(selectedDestination.paquetes);
     const rowPaquetes = modal.querySelector('.paquetes');
     rowPaquetes.innerHTML = '';
-    paquetes.forEach( paquete => {
+    paquetes.forEach(paquete => {
 
       const liCaracteristicas = (caracteristicas) => {
         caracteristicas = Array.from(caracteristicas);
         let liHtmll = ''
-        caracteristicas.forEach( c => liHtmll= liHtmll + `<li>${c}</li>`)
+        caracteristicas.forEach(c => liHtmll = liHtmll + `<li>${c}</li>`)
         return liHtmll;
       }
       rowPaquetes.innerHTML += `<div class="col-lg-4 d-lg-block mb-4 ">
@@ -256,7 +308,7 @@ btnsDesatalleDestinos.forEach((button, index) => {
         </div>
       </div>
     </div>`
-      
+
     })
   });
 });
@@ -293,3 +345,4 @@ reserveButtons.forEach(btn => {
     }
   });
 })
+
